@@ -23,6 +23,8 @@ RESULTS (numbers - from Day 10)
    flagged transactions found. NUMBERS make it strong.
 
    CHALLENGES & TRADE-OFFS (honest)
+   -The numeric columns like sales and Quanity data rows store string type dificult to calculate then to_cast(Double) to convert the data type from string to numeric float
+   - create quarantine folder to store  irrelevant data like negative transaction amount invalid data null values
    "The pipeline was slow because it looped row by
    row; I fixed it with vectorization, cutting runtime
    from 27s to 3s."

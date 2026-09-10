@@ -8,8 +8,20 @@ No automation for monitoring data received once in a week due to data analytics 
 Overview
 Designed and Implement a hybrid retail data platform integrating on-prem ERP,POS and supply chain system with azure cloud service for centerlized analytics scalable processing and enterprises reporting . Build modern data pipeline and cloud based transformation frameworks enabling efficient reporting and operational Insight
 
-Architecture: 
+Medallion Architecture: 
 Show the Bronze -> Silver -> Gold diagram and List the tools you used 
+
+TECH STACK:
+AZURE DATA FACTORY: Ingested data from source system to landing moved into ADLS gen 2 
+AZURE DATABRICKS: Data transformation created medallion Architecture
+|__My Organization
+|    |-Compute
+|       |--volume 
+|           |--lives raw data
+|  
+| |_TABLES/
+|    |--Silver_layer
+|    |-- Gold layer
 
 HOW TO RUN (the important one)
    Step-by-step commands:
@@ -29,7 +41,16 @@ RESULTS (numbers - from Day 10)
    row; I fixed it with vectorization, cutting runtime
    from 27s to 3s."
 
-   
+   Repository Structure
+   '''
+  |__data/
+  | |-bronze\   # Raw ingestion data 
+  | |-silver\    # Cleaned & structure data
+  | |-gold\      # Organized business ready data for report
+  |
+  |__Notebooks/
+  | |-Ingestion
+  | |-Cleaning.ipynb
       
 
 
